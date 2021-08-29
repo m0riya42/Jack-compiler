@@ -1,4 +1,4 @@
-# compilerUsingYoix
+# Jack Compiler using Yoix
 Compiler to Jack files using Yoix Scripting Language.
 
 https://github.com/att/yoix
