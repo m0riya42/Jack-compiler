@@ -20,10 +20,11 @@ best bits and many familiar constructs from both Java and C plus a few twists of
 import yoix.*.*;
 printf("hello world\n"); 
 ```
-*in order to run the file, open cmd from the folder and write:   <b> java -jar yoix.jar hello_world.yx </b> 
-*in order to prevent memory problems add '-Xmx512m' to the line above. (resize memory location to 512m instead of 64m (default))
-
-
+<pre>
+** in order to run the file, open commandLine from the folder and write: <b> java  -jar  yoix.jar  hello_world.yx </b> 
+** in order to prevent memory problems add '-Xmx512m' to the line above. 
+(resizing memory location to 512m instead of 64m (default))
+</pre>
 
 https://github.com/att/yoix
 
