@@ -1,7 +1,29 @@
-# Jack Compiler using Yoix
-Compiler to Jack files using Yoix Scripting Language. 
+# Jack-Compiler using Yoix
+## Compiler to Jack language using Yoix Scripting Language.
 
-Principles of Programming Languages
+(NAND-to-Tetris---add )
+The Yoix interpreter is built using 100% pure JavaTM technology and its language includes the
+best bits and many familiar constructs from both Java and C plus a few twists of its own.
+(<cite>'An Introduction to the YoixTM Interpreter'</cite> by Richard Drechsler and John Mocenigo)
+
+
+### Preparing the Workspace
+* Install java workspace- [jdk-download](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
+* Add path to the system's paths- [set-path-explanation ](https://www.computerhope.com/issues/ch000549.htm)
+* Download and Extract Yoix- [download-yoix](https://github.com/att/yoix)
+
+### Run "Hello World" in Yoix
+* Enter the extracted folder with the 'yoix.jar' file
+* Create new file called 'hello_world.yx'
+* Enter the file and write: 
+```md
+import yoix.*.*;
+printf("hello world\n"); 
+```
+*in order to run the file, open cmd from the folder and write:   <b> java -jar yoix.jar hello_world.yx </b> 
+*in order to prevent memory problems add '-Xmx512m' to the line above. (resize memory location to 512m instead of 64m (default))
+
+
 
 https://github.com/att/yoix
 
