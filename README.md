@@ -1,5 +1,7 @@
 # Jack Compiler using Yoix
-Compiler to Jack files using Yoix Scripting Language.
+Compiler to Jack files using Yoix Scripting Language. 
+
+Principles of Programming Languages
 
 https://github.com/att/yoix
 
