@@ -16,10 +16,13 @@ best bits and many familiar constructs from both Java and C plus a few twists of
 * Enter the extracted folder with the 'yoix.jar' file
 * Create new file called 'hello_world.yx'
 * Enter the file and write: 
+
 ```md
 import yoix.*.*;
 printf("hello world\n"); 
 ```
+
+
 <pre>
 ** in order to run the file, open commandLine from the folder and write: <b> java  -jar  yoix.jar  hello_world.yx </b> 
 ** in order to prevent memory problems add '-Xmx512m' to the line above. 
