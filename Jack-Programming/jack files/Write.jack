@@ -1,0 +1,188 @@
+class Write {
+
+	 /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+
+	method void writeTitle()
+	{
+
+		var Letters letters;
+		do Screen.setColor(true);
+		do letters.drawC(61, 20, true);
+		do letters.drawA(99, 20, false);
+		do letters.drawL(140, 20, true);
+		do letters.drawC(180, 20, false);
+		do letters.drawU(218, 20, true);
+		do letters.drawL(260, 20, false);
+		do letters.drawA(300, 20, true);
+		do letters.drawT(338, 20, false);
+		do letters.drawO(377, 20, true);
+		do letters.drawR(418, 20, false);
+
+		//do Screen.drawRectangle(i+0,j+0,i+6,j+37);
+
+
+		return;
+	}
+
+	method void clearTitle()
+	{
+		//clear title
+		do Screen.setColor(false);
+		do Screen.drawRectangle(56, 8, 456, 65);
+
+		//first frame
+		do Screen.setColor(true);
+		do Screen.drawRectangle(68, 9, 444, 67);
+
+		do Screen.setColor(false);
+		do Screen.drawRectangle(71, 12, 441, 64);
+
+		//second frame
+		do Screen.setColor(true);
+		do Screen.drawRectangle(73, 14, 439, 60);
+
+		do Screen.setColor(false);
+		do Screen.drawRectangle(75, 16, 437, 58);
+
+
+		return;
+	}
+	method int recognizeKey(int keyPress)
+	{
+		var Star star;
+		if (keyPress = 32) //space
+		{
+			do star.drawStar(276, 237);
+			return 10;
+
+		}
+		//if (keyPress = 133) //down
+		//{
+		//	do star.drawStar(276, 237);
+		//}
+		//	if (keyPress = 131) //up
+		//	{
+		//	}
+		if (keyPress = 130) //left
+		{
+			do star.drawStar(20, 90);
+			return 15;
+
+		}
+		if (keyPress = 132) //right
+
+		{
+			do star.drawStar(148, 90);
+			return 16;
+		}
+		if (keyPress = 128) //enter
+		{
+			do star.drawStar(276, 237);
+			return 17;
+		}
+		if (keyPress = 43) //+
+		{
+			do star.drawStar(404, 200);
+			return 11;
+		}
+		if (keyPress = 45) // -
+		{
+			do star.drawStar(404, 164);
+			return 12;
+		}
+		if (keyPress = 42) //*
+		{
+			do star.drawStar(404, 128);
+			return 13;
+		}
+		if (keyPress = 47) // /
+		{
+			do star.drawStar(404, 237);
+			return 14;
+		}
+		if (keyPress = 48) // 0
+		{
+			do star.drawStar(20, 237);
+			return 0;
+
+		}
+		if (keyPress = 49) //1
+		{
+			do star.drawStar(20, 128);
+			return 1;
+		}
+		if (keyPress = 50) //2
+		{
+			do star.drawStar(148, 128);
+			return 2;
+		}
+		if (keyPress = 51) //3
+		{
+			do star.drawStar(276, 128);
+			return 3;
+		}
+		if (keyPress = 52) //4
+		{
+			do star.drawStar(20, 164);
+			return 4; 
+		}
+		if (keyPress = 53)//5 
+		{
+			do star.drawStar(148, 164);
+			return 5;
+		}
+		if (keyPress = 54)//6
+		{
+			do star.drawStar(276, 164);
+			return 6;
+		}
+		if (keyPress = 55) //7
+		{
+			do star.drawStar(20, 200);
+			return 7;
+		}
+		if (keyPress = 56) //8
+		{
+			do star.drawStar(148, 200);
+			return 8;
+		}
+		if (keyPress = 57) //9
+		{
+			do star.drawStar(276, 200);
+			return 9;
+		}
+		if (keyPress = 139)// del
+		{
+			do star.drawStar(276, 90);
+			return 18;
+
+		}
+		if (keyPress = 46) // .
+		{
+			do star.drawStar(148, 237);
+			return 19;
+		}
+		if (keyPress = 129) //AC -backspace
+		{
+			do star.drawStar(404, 90);
+			return 20;
+
+
+		}
+		 return -1;
+		
+	}
+
+
+
+}
+
+
+
+

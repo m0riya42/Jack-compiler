@@ -1,0 +1,110 @@
+function Star.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Star.drawStar 0
+push argument 0
+pop pointer 0
+push pointer 0
+push argument 1
+push argument 2
+push constant 0
+not
+push constant 0
+not
+call Star.drawGlowStar 5
+pop temp 0
+push constant 100
+call Sys.wait 1
+pop temp 0
+push pointer 0
+push argument 1
+push argument 2
+push constant 0
+not
+push constant 0
+call Star.drawGlowStar 5
+pop temp 0
+push constant 0
+return
+function Star.drawGlowStar 0
+push argument 0
+pop pointer 0
+push argument 4
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 2
+add
+push argument 2
+push constant 0
+add
+push argument 1
+push constant 7
+add
+push argument 2
+push constant 7
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 2
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 7
+add
+push argument 2
+push constant 0
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 8
+add
+call Screen.drawPixel 2
+pop temp 0
+push argument 3
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push argument 1
+push constant 5
+add
+push argument 2
+push constant 0
+add
+push argument 1
+push constant 5
+add
+push argument 2
+push constant 9
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 0
+add
+push argument 2
+push constant 5
+add
+push argument 1
+push constant 9
+add
+push argument 2
+push constant 5
+add
+call Screen.drawLine 4
+pop temp 0
+label IF_FALSE0
+push constant 0
+return

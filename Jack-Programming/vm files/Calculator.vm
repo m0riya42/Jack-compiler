@@ -1,0 +1,183 @@
+function Calculator.ctor 0
+push constant 3
+call Memory.alloc 1
+pop pointer 0
+push constant 0
+pop this 0
+push constant 0
+pop this 1
+push constant 0
+pop this 2
+push pointer 0
+return
+function Calculator.run 7
+push argument 0
+pop pointer 0
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+push local 5
+pop local 2
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+label WHILE_EXP0
+push local 5
+push constant 10
+lt
+not
+if-goto WHILE_END0
+push local 2
+push constant 10
+call Math.multiply 2
+pop local 2
+push local 2
+push local 5
+add
+pop local 2
+push local 2
+call Output.printInt 1
+pop temp 0
+push constant 2
+call String.new 1
+push constant 44
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+goto WHILE_EXP0
+label WHILE_END0
+push local 5
+push constant 10
+gt
+push local 5
+and
+push constant 15
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 5
+pop local 4
+push local 4
+call Output.printInt 1
+pop temp 0
+push constant 2
+call String.new 1
+push constant 44
+call String.appendChar 2
+push constant 32
+call String.appendChar 2
+call Output.printString 1
+pop temp 0
+label IF_FALSE0
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+push local 5
+pop local 3
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+label WHILE_EXP1
+push local 5
+push constant 10
+lt
+not
+if-goto WHILE_END1
+push local 3
+push constant 10
+call Math.multiply 2
+pop local 3
+push local 3
+push local 5
+add
+pop local 3
+call Keyboard.keyPressed 0
+pop local 1
+push local 0
+push local 1
+call Write.recognizeKey 2
+pop local 5
+goto WHILE_EXP1
+label WHILE_END1
+push local 5
+push constant 10
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push pointer 0
+call Calculator.Calculate 1
+pop local 6
+label IF_FALSE1
+push local 6
+return
+function Calculator.Calculate 1
+push argument 0
+pop pointer 0
+push this 2
+push constant 11
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push this 0
+push this 1
+add
+pop local 0
+label IF_FALSE0
+push this 2
+push constant 12
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push this 0
+push this 1
+sub
+pop local 0
+label IF_FALSE1
+push this 2
+push constant 13
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push this 0
+push this 1
+call Math.multiply 2
+pop local 0
+label IF_FALSE2
+push this 2
+push constant 14
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push this 0
+push this 1
+call Math.divide 2
+pop local 0
+label IF_FALSE3
+push local 0
+return

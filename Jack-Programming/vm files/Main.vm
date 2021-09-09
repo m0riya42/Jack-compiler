@@ -1,0 +1,35 @@
+function Main.main 6
+call Calculator.ctor 0
+pop local 5
+push local 3
+call CalcScreen.drawTable 1
+pop temp 0
+push local 3
+call CalcScreen.drawNumbers 1
+pop temp 0
+push local 3
+call CalcScreen.drawOpertor 1
+pop temp 0
+call Keyboard.keyPressed 0
+pop local 1
+label WHILE_EXP0
+push local 1
+push constant 0
+eq
+not
+if-goto WHILE_END0
+call Keyboard.keyPressed 0
+pop local 1
+goto WHILE_EXP0
+label WHILE_END0
+push local 1
+call Output.printInt 1
+pop temp 0
+push local 3
+call CalcScreen.dispose 1
+pop temp 0
+push local 4
+call Write.dispose 1
+pop temp 0
+push constant 0
+return

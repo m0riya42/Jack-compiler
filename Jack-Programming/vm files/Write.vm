@@ -1,0 +1,434 @@
+function Write.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Write.writeTitle 1
+push argument 0
+pop pointer 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push local 0
+push constant 61
+push constant 20
+push constant 0
+not
+call Letters.drawC 4
+pop temp 0
+push local 0
+push constant 99
+push constant 20
+push constant 0
+call Letters.drawA 4
+pop temp 0
+push local 0
+push constant 140
+push constant 20
+push constant 0
+not
+call Letters.drawL 4
+pop temp 0
+push local 0
+push constant 180
+push constant 20
+push constant 0
+call Letters.drawC 4
+pop temp 0
+push local 0
+push constant 218
+push constant 20
+push constant 0
+not
+call Letters.drawU 4
+pop temp 0
+push local 0
+push constant 260
+push constant 20
+push constant 0
+call Letters.drawL 4
+pop temp 0
+push local 0
+push constant 300
+push constant 20
+push constant 0
+not
+call Letters.drawA 4
+pop temp 0
+push local 0
+push constant 338
+push constant 20
+push constant 0
+call Letters.drawT 4
+pop temp 0
+push local 0
+push constant 377
+push constant 20
+push constant 0
+not
+call Letters.drawO 4
+pop temp 0
+push local 0
+push constant 418
+push constant 20
+push constant 0
+call Letters.drawR 4
+pop temp 0
+push constant 0
+return
+function Write.clearTitle 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 56
+push constant 8
+push constant 456
+push constant 65
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 68
+push constant 9
+push constant 444
+push constant 67
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 71
+push constant 12
+push constant 441
+push constant 64
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 73
+push constant 14
+push constant 439
+push constant 60
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push constant 75
+push constant 16
+push constant 437
+push constant 58
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+return
+function Write.recognizeKey 1
+push argument 0
+pop pointer 0
+push argument 1
+push constant 32
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push local 0
+push constant 276
+push constant 237
+call Star.drawStar 3
+pop temp 0
+push constant 10
+return
+label IF_FALSE0
+push argument 1
+push constant 130
+eq
+if-goto IF_TRUE1
+goto IF_FALSE1
+label IF_TRUE1
+push local 0
+push constant 20
+push constant 90
+call Star.drawStar 3
+pop temp 0
+push constant 15
+return
+label IF_FALSE1
+push argument 1
+push constant 132
+eq
+if-goto IF_TRUE2
+goto IF_FALSE2
+label IF_TRUE2
+push local 0
+push constant 148
+push constant 90
+call Star.drawStar 3
+pop temp 0
+push constant 16
+return
+label IF_FALSE2
+push argument 1
+push constant 128
+eq
+if-goto IF_TRUE3
+goto IF_FALSE3
+label IF_TRUE3
+push local 0
+push constant 276
+push constant 237
+call Star.drawStar 3
+pop temp 0
+push constant 17
+return
+label IF_FALSE3
+push argument 1
+push constant 43
+eq
+if-goto IF_TRUE4
+goto IF_FALSE4
+label IF_TRUE4
+push local 0
+push constant 404
+push constant 200
+call Star.drawStar 3
+pop temp 0
+push constant 11
+return
+label IF_FALSE4
+push argument 1
+push constant 45
+eq
+if-goto IF_TRUE5
+goto IF_FALSE5
+label IF_TRUE5
+push local 0
+push constant 404
+push constant 164
+call Star.drawStar 3
+pop temp 0
+push constant 12
+return
+label IF_FALSE5
+push argument 1
+push constant 42
+eq
+if-goto IF_TRUE6
+goto IF_FALSE6
+label IF_TRUE6
+push local 0
+push constant 404
+push constant 128
+call Star.drawStar 3
+pop temp 0
+push constant 13
+return
+label IF_FALSE6
+push argument 1
+push constant 47
+eq
+if-goto IF_TRUE7
+goto IF_FALSE7
+label IF_TRUE7
+push local 0
+push constant 404
+push constant 237
+call Star.drawStar 3
+pop temp 0
+push constant 14
+return
+label IF_FALSE7
+push argument 1
+push constant 48
+eq
+if-goto IF_TRUE8
+goto IF_FALSE8
+label IF_TRUE8
+push local 0
+push constant 20
+push constant 237
+call Star.drawStar 3
+pop temp 0
+push constant 0
+return
+label IF_FALSE8
+push argument 1
+push constant 49
+eq
+if-goto IF_TRUE9
+goto IF_FALSE9
+label IF_TRUE9
+push local 0
+push constant 20
+push constant 128
+call Star.drawStar 3
+pop temp 0
+push constant 1
+return
+label IF_FALSE9
+push argument 1
+push constant 50
+eq
+if-goto IF_TRUE10
+goto IF_FALSE10
+label IF_TRUE10
+push local 0
+push constant 148
+push constant 128
+call Star.drawStar 3
+pop temp 0
+push constant 2
+return
+label IF_FALSE10
+push argument 1
+push constant 51
+eq
+if-goto IF_TRUE11
+goto IF_FALSE11
+label IF_TRUE11
+push local 0
+push constant 276
+push constant 128
+call Star.drawStar 3
+pop temp 0
+push constant 3
+return
+label IF_FALSE11
+push argument 1
+push constant 52
+eq
+if-goto IF_TRUE12
+goto IF_FALSE12
+label IF_TRUE12
+push local 0
+push constant 20
+push constant 164
+call Star.drawStar 3
+pop temp 0
+push constant 4
+return
+label IF_FALSE12
+push argument 1
+push constant 53
+eq
+if-goto IF_TRUE13
+goto IF_FALSE13
+label IF_TRUE13
+push local 0
+push constant 148
+push constant 164
+call Star.drawStar 3
+pop temp 0
+push constant 5
+return
+label IF_FALSE13
+push argument 1
+push constant 54
+eq
+if-goto IF_TRUE14
+goto IF_FALSE14
+label IF_TRUE14
+push local 0
+push constant 276
+push constant 164
+call Star.drawStar 3
+pop temp 0
+push constant 6
+return
+label IF_FALSE14
+push argument 1
+push constant 55
+eq
+if-goto IF_TRUE15
+goto IF_FALSE15
+label IF_TRUE15
+push local 0
+push constant 20
+push constant 200
+call Star.drawStar 3
+pop temp 0
+push constant 7
+return
+label IF_FALSE15
+push argument 1
+push constant 56
+eq
+if-goto IF_TRUE16
+goto IF_FALSE16
+label IF_TRUE16
+push local 0
+push constant 148
+push constant 200
+call Star.drawStar 3
+pop temp 0
+push constant 8
+return
+label IF_FALSE16
+push argument 1
+push constant 57
+eq
+if-goto IF_TRUE17
+goto IF_FALSE17
+label IF_TRUE17
+push local 0
+push constant 276
+push constant 200
+call Star.drawStar 3
+pop temp 0
+push constant 9
+return
+label IF_FALSE17
+push argument 1
+push constant 139
+eq
+if-goto IF_TRUE18
+goto IF_FALSE18
+label IF_TRUE18
+push local 0
+push constant 276
+push constant 90
+call Star.drawStar 3
+pop temp 0
+push constant 18
+return
+label IF_FALSE18
+push argument 1
+push constant 46
+eq
+if-goto IF_TRUE19
+goto IF_FALSE19
+label IF_TRUE19
+push local 0
+push constant 148
+push constant 237
+call Star.drawStar 3
+pop temp 0
+push constant 19
+return
+label IF_FALSE19
+push argument 1
+push constant 129
+eq
+if-goto IF_TRUE20
+goto IF_FALSE20
+label IF_TRUE20
+push local 0
+push constant 404
+push constant 90
+call Star.drawStar 3
+pop temp 0
+push constant 20
+return
+label IF_FALSE20
+push constant 1
+neg
+return

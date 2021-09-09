@@ -1,0 +1,76 @@
+
+class Main {
+
+	function void main() {
+		var int jump;
+		var int keyIN, result;
+
+		var CalcScreen calcScreen;
+//	var Bear bear;
+		var Write write;
+		var Calculator calculator;
+		
+		let calculator= Calculator.ctor();
+		
+		do calcScreen.drawTable();
+		do calcScreen.drawNumbers();
+		do calcScreen.drawOpertor();
+
+	//	do bear.drawMiddleTwoBears(2, 480);
+	//	do write.writeTitle();
+
+		let keyIN = Keyboard.keyPressed();
+
+		//כל לחצן מוציא את המחשבון למצב פעולה
+		while ((keyIN = 0))
+		{
+			let keyIN = Keyboard.keyPressed();
+
+
+		}
+		do Output.printInt(keyIN);
+
+		//אם יצא מהלולאה למחוק את המסך למסך השני
+		//do write.clearTitle();	
+		//let result = calculator.run();
+		//do Output.moveCursor(36,257);
+	//	do Output.printInt(result);
+
+		
+
+		//dispose
+		do calcScreen.dispose();
+		//do bear.dispose();
+		do write.dispose();
+		//do calculator.dispose();
+		return;
+
+	}
+}
+
+
+////זיהוי המספרים במקשים
+//var int keep;
+//var int in;
+//
+//let in = Keyboard.keyPressed();
+//let keep = in;
+//
+//
+//
+//while (true)
+//{
+//
+//	let in = Keyboard.keyPressed();
+//	if (~(keep = in))
+//	{
+//		do Output.printInt(in);
+//		do Output.printString(", ");
+//		let keep = in;
+//
+//	}
+
+
+
+// let game = Marksmanship.new(3);
+//do game.dispose();

@@ -1,0 +1,438 @@
+function Bear.dispose 0
+push argument 0
+pop pointer 0
+push pointer 0
+call Memory.deAlloc 1
+pop temp 0
+push constant 0
+return
+function Bear.drawBear 0
+push argument 0
+pop pointer 0
+push argument 1
+push constant 14
+add
+push argument 2
+push constant 11
+add
+push constant 9
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 4
+add
+push argument 2
+push constant 3
+add
+push constant 3
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 23
+add
+push argument 2
+push constant 3
+add
+push constant 3
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 3
+add
+push argument 2
+push constant 4
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 23
+add
+push argument 2
+push constant 3
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 14
+add
+push argument 2
+push constant 29
+add
+push constant 10
+call Screen.drawCircle 3
+pop temp 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 10
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 12
+add
+push argument 2
+push constant 11
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 16
+add
+push argument 2
+push constant 7
+add
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 11
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 14
+add
+push argument 2
+push constant 13
+add
+push argument 1
+push constant 14
+add
+push argument 2
+push constant 14
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 11
+add
+push argument 2
+push constant 15
+add
+push argument 1
+push constant 17
+add
+push argument 2
+push constant 15
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 12
+add
+push argument 2
+push constant 16
+add
+push argument 1
+push constant 16
+add
+push argument 2
+push constant 16
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 10
+add
+push argument 2
+push constant 37
+add
+push argument 1
+push constant 11
+add
+push argument 2
+push constant 44
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 18
+add
+push argument 2
+push constant 37
+add
+push argument 1
+push constant 19
+add
+push argument 2
+push constant 44
+add
+call Screen.drawRectangle 4
+pop temp 0
+push argument 1
+push constant 10
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 9
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 8
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 19
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 20
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 21
+add
+push argument 2
+push constant 44
+add
+push constant 1
+call Screen.drawCircle 3
+pop temp 0
+push argument 1
+push constant 22
+add
+push argument 2
+push constant 23
+add
+push argument 1
+push constant 27
+add
+push argument 2
+push constant 20
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 22
+add
+push argument 2
+push constant 23
+add
+push argument 1
+push constant 27
+add
+push argument 2
+push constant 19
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 0
+add
+push argument 2
+push constant 20
+add
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 23
+add
+call Screen.drawLine 4
+pop temp 0
+push argument 1
+push constant 0
+add
+push argument 2
+push constant 19
+add
+push argument 1
+push constant 6
+add
+push argument 2
+push constant 23
+add
+call Screen.drawLine 4
+pop temp 0
+push constant 0
+return
+function Bear.earseField 0
+push argument 0
+pop pointer 0
+push constant 0
+call Screen.setColor 1
+pop temp 0
+push argument 1
+push constant 0
+add
+push argument 2
+push constant 0
+add
+push argument 1
+push constant 26
+add
+push argument 2
+push constant 46
+add
+call Screen.drawRectangle 4
+pop temp 0
+push constant 0
+not
+call Screen.setColor 1
+pop temp 0
+push constant 0
+return
+function Bear.drawMiddleTwoBears 1
+push argument 0
+pop pointer 0
+push pointer 0
+push argument 1
+push constant 13
+call Bear.drawBear 3
+pop temp 0
+push pointer 0
+push argument 2
+push constant 13
+call Bear.drawBear 3
+pop temp 0
+push local 0
+push constant 35
+push constant 20
+push constant 0
+not
+push constant 0
+not
+call Star.drawGlowStar 5
+pop temp 0
+push local 0
+push constant 45
+push constant 10
+push constant 0
+push constant 0
+not
+call Star.drawGlowStar 5
+pop temp 0
+push local 0
+push constant 467
+push constant 20
+push constant 0
+not
+push constant 0
+not
+call Star.drawGlowStar 5
+pop temp 0
+push local 0
+push constant 457
+push constant 10
+push constant 0
+push constant 0
+not
+call Star.drawGlowStar 5
+pop temp 0
+push constant 0
+return
+function Bear.drawTwoJumpingBear 1
+push argument 0
+pop pointer 0
+push constant 25
+pop local 0
+label WHILE_EXP0
+push local 0
+push constant 10
+gt
+push argument 3
+push constant 0
+eq
+not
+and
+not
+if-goto WHILE_END0
+push pointer 0
+push argument 1
+push local 0
+call Bear.drawBear 3
+pop temp 0
+push pointer 0
+push argument 2
+push local 0
+call Bear.drawBear 3
+pop temp 0
+push constant 2000
+call Sys.wait 1
+pop temp 0
+push pointer 0
+push argument 1
+push local 0
+push constant 1
+add
+call Bear.earseField 3
+pop temp 0
+push pointer 0
+push argument 2
+push local 0
+push constant 1
+add
+call Bear.earseField 3
+pop temp 0
+push local 0
+push constant 1
+sub
+pop local 0
+push local 0
+push constant 10
+eq
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push constant 25
+pop local 0
+push pointer 0
+push argument 1
+push local 0
+call Bear.drawBear 3
+pop temp 0
+push pointer 0
+push argument 2
+push local 0
+call Bear.drawBear 3
+pop temp 0
+push argument 3
+push constant 1
+sub
+pop argument 3
+label IF_FALSE0
+goto WHILE_EXP0
+label WHILE_END0
+push constant 0
+return

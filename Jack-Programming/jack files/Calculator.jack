@@ -1,0 +1,116 @@
+class Calculator {
+
+	field int x;
+	field int y;
+	field int op;
+	//field int result;
+
+ /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+	
+    /** Constructs a new square with a given location and size. */
+    constructor Calculator ctor() {
+        let x = 0;
+        let y = 0;
+        let op = 0;
+
+        //do draw();
+
+        return this;
+    }
+
+	
+	method int run() {
+		
+		var Write write;
+		var int keyIN;
+		var int numX, numY, op1;
+		var int input;
+		var int result;
+
+
+		let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+		let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+		let numX = input;
+		
+		let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+		let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+			
+		while (input < 10) //התקבל מספר
+		{
+			let numX = Math.multiply(numX, 10);
+			let numX = numX+input;
+
+			do Output.printInt(numX);
+			do Output.printString(", ");
+
+
+			
+			let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+			let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+		}
+			
+		if (input>10 & input<15) //ההתקבל אופרטור
+		{
+		
+			let op1 = input;
+			do Output.printInt(op1);
+			do Output.printString(", ");
+
+
+		}
+			
+		let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+		let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+		let numY = input;
+		
+			
+		let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+		let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+	
+		while (input < 10) //התקבל מספר
+		{
+			let numY = Math.multiply(numY,10);
+			let numY = numY+input;
+				
+			let keyIN = Keyboard.keyPressed();//קולט את התו שהוקלד
+			let input = write.recognizeKey(keyIN);//מחזיר את סוג התו
+		}
+			
+		if (input = 10)//=
+		{
+			let result= Calculate();
+		}
+		
+		return result;
+	}
+	
+	method int Calculate(){
+		var int result;
+		if (op = 11) //+
+		{
+			let result = x+y;
+		}
+		if (op = 12) //-
+		{
+			let result = x-y;
+		}
+		if (op = 13) //*
+		{
+			let result = Math.multiply(x,y);
+		}
+		if (op = 14) // /
+		{
+			let result = Math.divide(x,y);
+		}
+		
+		return result;
+	
+	}
+	
+
+	
+}

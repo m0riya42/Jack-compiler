@@ -1,0 +1,59 @@
+class Star
+{
+	 /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+	method void drawStar(int i, int j)
+	{
+		//do Screen.setColor(true);
+		//do Screen.drawLine(i+0,j+0,i+6,j+6);
+		//do Screen.drawLine(i+6,j+0,i+0,j+6);
+		//do Screen.drawPixel(i+3,j+5);
+		//return;
+		do drawGlowStar(i, j, true, true);
+		do Sys.wait(100);
+		do drawGlowStar(i, j, true, false);
+		return;
+	}
+
+	method void drawGlowStar(int i, int j, boolean isSecLine, boolean isColor)
+	{
+		do Screen.setColor(isColor);
+
+
+		//small
+		do Screen.drawLine(i + 2, j + 0, i + 7, j + 7);
+		do Screen.drawLine(i + 2, j + 7, i + 7, j + 0);
+		do Screen.drawPixel(i + 6, j + 8);
+
+		//big
+		if (isSecLine)
+		{
+			do Screen.drawLine(i + 5, j + 0, i + 5, j + 9);
+			do Screen.drawLine(i + 0, j + 5, i + 9, j + 5);
+		}
+
+		return;
+
+	}
+}
+
+
+//small
+//do Screen.drawLine(i+2,j+0,i+7,j+7);
+//do Screen.drawLine(i+2,j+7,i+7,j+0);
+//do Screen.drawPixel(i+6,j+8);
+//do Sys.wait(200);
+//middle
+//do Screen.drawLine(i+1,j+0,i+8,j+8);
+//do Screen.drawLine(i+1,j+8,i+8,j+0);
+//do Sys.wait(200);
+
+
+//bigdo Screen.drawLine(i+0,j+0,i+9,j+9);
+//do Screen.drawLine(i+0,j+9,i+9,j+0);
+//do Screen.drawPixel(i+6,j+8);

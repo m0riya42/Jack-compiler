@@ -1,0 +1,121 @@
+class Letters {
+
+	
+	 /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+	method void drawC(int i, int j, boolean isEffect)
+	{
+	
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+8,j+0,i+32,j+5);
+		do Screen.drawRectangle(i+8,j+32,i+32,j+37);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	method void drawA(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+24,j+0,i+32,j+37);
+		do Screen.drawRectangle(i+8,j+0,i+32,j+5);
+		do Screen.drawRectangle(i+8,j+16,i+32,j+21);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	method void drawL(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+8,j+32,i+32,j+37);
+		do Screen.drawRectangle(i+24,j+18,i+32,j+37);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	method void drawU(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+8,j+32,i+32,j+37);
+		do Screen.drawRectangle(i+24,j+0,i+32,j+37);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	method void drawO(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+8,j+32,i+32,j+37);
+		do Screen.drawRectangle(i+24,j+0,i+32,j+37);
+		do Screen.drawRectangle(i+8,j+0,i+32,j+5);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	method void drawT(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+32,j+5);
+		do Screen.drawRectangle(i+13,j+0,i+21,j+37);
+if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}		
+		return;
+	}
+	method void drawR(int i, int j, boolean isEffect)
+	{
+		
+		do Screen.drawRectangle(i+0,j+0,i+8,j+37);
+		do Screen.drawRectangle(i+8,j+16,i+32,j+21);
+		do Screen.drawRectangle(i+8,j+0,i+32,j+5);
+		do Screen.drawRectangle(i+24,j+0,i+32,j+21);
+		do Screen.drawRectangle(i+17,j+21,i+26,j+37);
+		if (isEffect)
+		{	do Screen.setColor(false);
+			do Screen.drawLine(i+2,j+0, i+2,j+37);
+			do Screen.setColor(true);
+		}
+		return;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

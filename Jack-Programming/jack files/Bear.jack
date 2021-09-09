@@ -1,0 +1,119 @@
+class Bear{
+
+	 /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+
+
+
+	method void drawBear(int i, int j)
+	{
+		//head
+		do Screen.drawCircle(i+14,j+11,9);
+		//ears -L to R
+		do Screen.drawCircle(i+4,j+3,3);
+		do Screen.drawCircle(i+23,j+3,3);
+
+		do Screen.setColor(false);
+		do Screen.drawCircle(i+3,j+4,1);
+		do Screen.drawCircle(i+23,j+3,1);
+		
+		//body
+		do Screen.setColor(true);
+		do Screen.drawCircle(i+14,j+29,10);
+		
+
+		//eyes
+		do Screen.setColor(false);
+		do Screen.drawRectangle(i+10,j+7,i+12,j+11);
+		do Screen.drawRectangle(i+16,j+7,i+18,j+11);
+		
+		//mouth+nose
+		do Screen.drawLine(i+14,j+13,i+14,j+14);
+		do Screen.drawLine(i+11,j+15,i+17,j+15);
+		do Screen.drawLine(i+12,j+16,i+16,j+16);
+
+		//legs L to R
+		do Screen.setColor(true);
+		do Screen.drawRectangle(i+10,j+37,i+11,j+44);
+		do Screen.drawRectangle(i+18,j+37,i+19,j+44);
+
+		do Screen.drawCircle(i+10,j+44,1);
+		do Screen.drawCircle(i+9,j+44,1);
+		do Screen.drawCircle(i+8,j+44,1);
+
+
+		do Screen.drawCircle(i+19,j+44,1);
+		do Screen.drawCircle(i+20,j+44,1);
+		do Screen.drawCircle(i+21,j+44,1);
+		
+		//hands L to R
+		do Screen.drawLine(i+22,j+23,i+27,j+20);
+		do Screen.drawLine(i+22,j+23,i+27,j+19);
+		
+		do Screen.drawLine(i+0,j+20,i+6,j+23);
+		do Screen.drawLine(i+0,j+19,i+6,j+23);
+
+		
+		return;
+	}
+
+
+method void earseField(int i, int j)
+	{
+		do Screen.setColor(false);
+		do Screen.drawRectangle(i+0,j+0,i+26,j+46);
+		do Screen.setColor(true);
+
+		return;
+	}
+
+
+method void drawMiddleTwoBears(int startX,int startY)
+{			
+			var Star star;
+
+			do drawBear(startX,13); 	//bear 1
+			do drawBear(startY,13);		//bear 2
+			
+		//stars beside them from L to R
+		do star.drawGlowStar(35,20, true,true);
+		do star.drawGlowStar(45,10, false,true);
+		
+		do star.drawGlowStar(467,20, true, true);
+		do star.drawGlowStar(457,10, false,true);
+	return;
+}
+
+method void drawTwoJumpingBear(int startX,int startY, int numJump)
+{	var int jump;
+	let jump=25;
+	while ((jump>10) &  ~(numJump=0))
+		{	
+			do drawBear(startX,jump); 	//bear 1
+			do drawBear(startY,jump); 	//bear 2
+
+			do Sys.wait(2000);
+			do earseField(startX,jump+1); //bear 1
+			do earseField(startY,jump+1); //bear 2
+
+			
+			let jump= jump-1;			
+			if (jump=10)
+				{
+					let jump=25;
+					do drawBear(startX,jump); 	//bear 1
+					do drawBear(startY,jump); 	//bear 2
+					let numJump= numJump-1;	
+
+				}
+				
+				
+			//do Sys.wait(100);
+			
+		}
+	return;
+}
+}

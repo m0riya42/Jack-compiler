@@ -1,0 +1,193 @@
+
+class CalcScreen
+{
+
+	 /** Deallocates the object's memory. */
+    method void dispose() {
+        do Memory.deAlloc(this);
+        return;
+    }
+	
+	method void drawTable()//int x1, int x2, int y1, int y2)
+	{
+		do Screen.setColor(true);
+
+		//יצירת השורות
+		do Screen.drawLine(0, 0, 511, 0 ); 
+		do Screen.drawLine(0, 71, 511, 71);
+		do Screen.drawLine(0, 107, 511, 107);
+		do Screen.drawLine(0, 143, 511, 143);
+		do Screen.drawLine(0, 179, 511, 179);
+		do Screen.drawLine(0, 215, 511, 215);
+		do Screen.drawLine(0, 255, 511, 255);
+		
+		//יצירת העמודות
+		do Screen.drawLine(0, 0, 0, 255);
+		do Screen.drawLine(127, 71, 127, 255);
+		do Screen.drawLine(255, 71, 255, 255);
+		do Screen.drawLine(383, 71, 383, 255);
+		do Screen.drawLine(511, 0, 511, 255);	
+		
+		return;
+	}
+	
+	method void drawNumbers()
+	{	
+		//draw num 0
+		do Screen.drawRectangle(54,226,74,229);
+		do Screen.drawRectangle(71,229,74,245);
+		do Screen.drawRectangle(54,229,57,245);
+		do Screen.drawRectangle(57,242,71,245);
+
+		
+		//draw num 1
+		do Screen.drawRectangle(63,118,65,134);
+		
+		//draw num 2
+		do Screen.drawRectangle(182,118,202,121);
+		do Screen.drawRectangle(199,121,202,123);
+		do Screen.drawRectangle(182,123,202,126);
+		do Screen.drawRectangle(182,126,185,128);
+		do Screen.drawRectangle(182,128,202,131);
+		
+		//draw num 3
+		do Screen.drawRectangle(310,118,327,121);
+		do Screen.drawRectangle(310,123,327,126);
+		do Screen.drawRectangle(310,128,327,131);
+		do Screen.drawRectangle(327,118,330,131);
+		
+		
+		//draw num 4
+		do Screen.drawRectangle(54,154,57,161);
+		do Screen.drawRectangle(71,154,74,170);
+		do Screen.drawRectangle(54,161,74,163);
+
+		//draw num 5
+		do Screen.drawRectangle(182,154,202,157);
+		do Screen.drawRectangle(182,157,185,161);
+		do Screen.drawRectangle(182,161,202,163);
+		do Screen.drawRectangle(199,163,202,167);
+		do Screen.drawRectangle(182,167,202,170);
+
+		//draw num 6
+		do Screen.drawRectangle(313,154,330,157);
+		do Screen.drawRectangle(313,160,330,163);
+		do Screen.drawRectangle(327,163,330,166);
+		do Screen.drawRectangle(313, 166,330,169);
+		do Screen.drawRectangle(310,154,313,169);
+
+		//draw num 7
+		do Screen.drawRectangle(54,190,74,193);
+		do Screen.drawRectangle(71,193,74,206);
+
+		//draw num 8
+		do Screen.drawRectangle(182,190,185,206);
+		do Screen.drawRectangle(185,190,199,193);
+		do Screen.drawRectangle(185,197,199,199);
+		do Screen.drawRectangle(185,203,199,206);
+		do Screen.drawRectangle(199,190,202,206);
+
+
+		
+		//draw num 9
+		do Screen.drawRectangle(310,190,327,193);
+		do Screen.drawRectangle(310,196,327,199);
+		do Screen.drawRectangle(310,202,327,205);
+		do Screen.drawRectangle(310,193,313,196);
+		do Screen.drawRectangle(327,190,330,205);
+
+		return;
+	}
+	
+	method void drawOpertor()
+	{
+		var int line;
+
+		//draw =
+		do Screen.drawRectangle(310,231,330,234);
+		do Screen.drawRectangle(310,238,330,241);
+		
+		//draw -
+		do Screen.drawRectangle(438,160,458,163);
+		
+		//draw +
+		do Screen.drawRectangle(446,190,450,196);
+		do Screen.drawRectangle(438,196,458,199);
+		do Screen.drawRectangle(446,199,450,205);
+		
+		//draw /
+		do Screen.drawRectangle(446,226,450,231);
+		do Screen.drawRectangle(438,233,458,236);
+		do Screen.drawRectangle(446,238,450,243);
+
+		//draw .
+		do Screen.drawRectangle(190,232,194,236);
+		
+		//draw *
+		do Screen.drawLine(436,118,456,134);
+		do Screen.drawLine(437,118,457,134);
+		do Screen.drawLine(438,118,458,134);
+		do Screen.drawLine(439,118,459,134);
+		do Screen.drawLine(440,118,460,134);
+
+		do Screen.drawLine(436,134,456,118);
+		do Screen.drawLine(437,134,457,118);
+		do Screen.drawLine(438,134,458,118);
+		do Screen.drawLine(439,134,459,118);
+		do Screen.drawLine(440,134,460,118);
+		
+		
+		//draw <|
+		let line=80;
+		while(line<103)
+		{
+		do Screen.drawLine(46,91,70,line);
+		let line= line+1;
+		}
+		
+		//draw |>
+		let line=80;
+		while(line<103)
+		{
+		do Screen.drawLine(182,line,205,91);
+		let line= line+1;
+		}	
+
+		//draw AC
+		do Screen.setColor(true); 
+
+		do Screen.drawRectangle(437,83,446,100); //black A
+		do Screen.drawRectangle(450,83,460,100); //black C
+
+		do Screen.setColor(false); 
+
+		do Screen.drawRectangle(440,86,443,90); //white A
+		do Screen.drawRectangle(440,93,443,100);// white A
+		do Screen.drawRectangle(453,86,460,97); //white C
+	
+		do Screen.setColor(true); 
+
+		//draw DEL
+		do Screen.setColor(true); 
+
+		do Screen.drawRectangle(302,83,311,100); //black D
+		do Screen.drawRectangle(315,83,324,100); //black E
+		do Screen.drawRectangle(328,83,337,100); //black L
+
+		do Screen.setColor(false); 
+
+		do Screen.drawRectangle(305,86,309,97); //white D
+		do Screen.drawRectangle(318,86,324,90);// white E
+		do Screen.drawRectangle(318,93,324,97); //white E
+		do Screen.drawRectangle(330,83,337,97); //white L
+
+	
+		do Screen.setColor(true); 
+		return;
+	}
+	
+
+
+	
+
+}
