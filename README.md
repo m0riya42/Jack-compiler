@@ -1,7 +1,6 @@
-# Jack-Compiler using Yoix
-## Compiler to Jack language using Yoix Scripting Language.
+# NAND to Tetris using Yoix Language
 
-(NAND-to-Tetris---add )
+(NAND-to-Tetris---add explanation )
 The Yoix interpreter is built using 100% pure JavaTM technology and its language includes the
 best bits and many familiar constructs from both Java and C plus a few twists of its own.
 (<cite>'An Introduction to the YoixTM Interpreter'</cite> by Richard Drechsler and John Mocenigo)
